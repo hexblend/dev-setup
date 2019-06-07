@@ -1,0 +1,16 @@
+code --install-extension dbankier.vscode-instant-markdown
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension emmanuelbeziat.vscode-great-icons
+code --install-extension esbenp.prettier-vscode
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension formulahendry.docker-explorer
+code --install-extension hollowtree.vue-snippets
+code --install-extension kuscamara.electron
+code --install-extension mrmlnc.vscode-autoprefixer
+code --install-extension npxms.hide-gitignored
+code --install-extension octref.vetur
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension ritwickdey.live-sass
+code --install-extension ritwickdey.LiveServer
+code --install-extension robinbentley.sass-indented
