@@ -1,8 +1,27 @@
 <application>
   <component name="MaterialThemeConfig">
     <option name="arrowsStyle" value="Darcula" />
+    <option name="compactDropdowns" value="true" />
+    <option name="fileStatusColorsEnabled" value="false" />
+    <option name="isCompactMenus" value="true" />
+    <option name="isCompactStatusBar" value="true" />
+    <option name="isCompactTables" value="true" />
     <option name="isContrastMode" value="true" />
+    <option name="isCustomTreeIndentEnabled" value="true" />
+    <option name="isDecoratedFolders" value="false" />
+    <option name="isMaterialDesign" value="false" />
+    <option name="isPsiIcons" value="false" />
     <option name="isWizardShown" value="true" />
+    <option name="overrideAccentColor" value="true" />
+    <option name="pristineConfig" value="false" />
+    <option name="useMaterialIcons" value="false" />
+    <option name="useProjectViewDecorators" value="false" />
+    <option name="indicatorStyle" value="None" />
+    <option name="treeFontSize" value="14" />
+    <option name="indicatorThickness" value="1" />
+    <option name="leftTreeIndent" value="2" />
+    <option name="settingsSelectedTab" value="3" />
+    <option name="accentColor" value="009688" />
     <option name="userId" value="-4229e287:16b338df10b:-8000" />
     <option name="version" value="3.5.0.1" />
   </component>
