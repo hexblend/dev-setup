@@ -1,0 +1,24 @@
+{
+  "workbench.colorTheme": "Electron",
+  "workbench.iconTheme": "vscode-great-icons",
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 27,
+  "editor.fontWeight": "300",
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+  "editor.minimap.enabled": false,
+  "python.pythonPath": "python3",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "window.zoomLevel": 0
+}
