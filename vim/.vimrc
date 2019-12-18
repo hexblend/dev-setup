@@ -18,6 +18,7 @@ Plugin 'http://github.com/tpope/vim-surround'
 Plugin 'https://tpope.io/vim/commentary.git'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'jwalton512/vim-blade'
@@ -25,17 +26,20 @@ Plugin 'posva/vim-vue'
 "Color Schemes
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'morhetz/gruvbox'
-Plugin 'larsbs/vimterial_dark'
+Plugin 'rakr/vim-one'
 
 call vundle#end()
 filetype plugin indent on
 
 "Theme Settings
-syntax on
+set termguicolors
+syntax enable
 set background=dark
+let g:airline_theme='one'
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme codedark
+colorscheme one
 
+let g:indentLine_setColors = 0
 "Relative line numbers
 set number
 set relativenumber
@@ -48,10 +52,10 @@ set expandtab
 
 "control-n shortcut for nerdTree
 map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 			
 "Prettier format on save
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
-"Commentary
-map <C-/> :Commentary<CR>
