@@ -5,8 +5,10 @@
 	"editor.lineHeight": 24,
 	"editor.formatOnPaste": true,
 	"editor.fontLigatures": true,
-	"terminal.integrated.fontFamily": "Hack Nerd Font",
+	"terminal.integrated.fontFamily": "MesloLGS NF",
 	"terminal.integrated.shell.osx": "/bin/zsh",
+	"terminal.external.linuxExec": "iterm",
+	"terminal.external.osxExec": "Iterm.app",
 	"editor.smoothScrolling": true,
 	"explorer.openEditors.visible": 0,
 	"workbench.tree.indent": 12,
@@ -14,7 +16,6 @@
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact"
 	},
-	"workbench.iconTheme": "material-icon-theme",
 	// "workbench.colorCustomizations": {
 	//     "statusBar.background": "#1A1A1A",
 	//     "statusBar.noFolderBackground": "#212121",
@@ -30,131 +31,137 @@
 		}
 	],
 	"liveSassCompile.settings.generateMap": false,
-	// "editor.lineNumbers": "relative",
-	// "editor.cursorBlinking": "solid",
+	// Vim
+	"editor.lineNumbers": "relative",
+	"editor.cursorBlinking": "solid",
 	"prettier.useTabs": true,
 	"prettier.singleQuote": true,
 	"prettier.tabWidth": 2,
 	"editor.tabSize": 4,
 	"editor.suggestSelection": "first",
-	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	// Enable italic support on any theme
-	"editor.tokenColorCustomizations": {
-		"[Dark+ Black]": {
-			"textMateRules": [
-				{
-					"scope": "emphasis",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": "strong",
-					"settings": {
-						"fontStyle": "bold"
-					}
-				},
-				{
-					"scope": "entity.other.attribute-name",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": "markup.underline",
-					"settings": {
-						"fontStyle": "underline"
-					}
-				},
-				{
-					"scope": "markup.bold",
-					"settings": {
-						"fontStyle": "bold"
-					}
-				},
-				{
-					"scope": "markup.heading",
-					"settings": {
-						"fontStyle": "bold"
-					}
-				},
-				{
-					"scope": "markup.italic",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": "storage.type",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": "storage.modifier",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"name": "String interpolation",
-					"scope": [
-						"punctuation.definition.template-expression.begin",
-						"punctuation.definition.template-expression.end",
-						"punctuation.section.embedded"
-					],
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": "keyword.control",
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": [
-						"keyword.operator.new",
-						"keyword.operator.expression",
-						"keyword.operator.cast",
-						"keyword.operator.sizeof",
-						"keyword.operator.logical.python"
-					],
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"name": "this.self",
-					"scope": "variable.language",
-					"settings": {
-						"fontStyle": "italic",
-						"foreground": "#ff5874"
-					}
-				},
-				{
-					"name": "@Decorator",
-					"scope": ["meta.decorator punctuation.decorator"],
-					"settings": {
-						"fontStyle": "italic"
-					}
-				},
-				{
-					"scope": ["punctuation.definition.comment", "comment"],
-					"settings": {
-						// "foreground": "#ff5874",
-						"fontStyle": " "
-					}
-				}
-			]
-		}
-	},
+	// "editor.tokenColorCustomizations": {
+	// 	"[Tokyo+ Night]": {
+	// 		"textMateRules": [
+	// 			{
+	// 				"scope": "emphasis",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "strong",
+	// 				"settings": {
+	// 					"fontStyle": "bold"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "entity.other.attribute-name",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "markup.underline",
+	// 				"settings": {
+	// 					"fontStyle": "underline"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "markup.bold",
+	// 				"settings": {
+	// 					"fontStyle": "bold"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "markup.heading",
+	// 				"settings": {
+	// 					"fontStyle": "bold"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "markup.italic",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "storage.type",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "storage.modifier",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"name": "String interpolation",
+	// 				"scope": [
+	// 					"punctuation.definition.template-expression.begin",
+	// 					"punctuation.definition.template-expression.end",
+	// 					"punctuation.section.embedded"
+	// 				],
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": "keyword.control",
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": [
+	// 					"keyword.operator.new",
+	// 					"keyword.operator.expression",
+	// 					"keyword.operator.cast",
+	// 					"keyword.operator.sizeof",
+	// 					"keyword.operator.logical.python"
+	// 				],
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"name": "this.self",
+	// 				"scope": "variable.language",
+	// 				"settings": {
+	// 					"fontStyle": "italic",
+	// 					"foreground": "#ff5874"
+	// 				}
+	// 			},
+	// 			{
+	// 				"name": "@Decorator",
+	// 				"scope": ["meta.decorator punctuation.decorator"],
+	// 				"settings": {
+	// 					"fontStyle": "italic"
+	// 				}
+	// 			},
+	// 			{
+	// 				"scope": ["punctuation.definition.comment", "comment"],
+	// 				"settings": {
+	// 					// "foreground": "#ff5874",
+	// 					"fontStyle": " "
+	// 				}
+	// 			}
+	// 		]
+	// 	}
+	// },
 	"workbench.activityBar.visible": false,
 	"window.zoomLevel": 0,
-	"workbench.colorTheme": "Dark+ Black"
+	"workbench.colorTheme": "Tokyo Night Storm",
+	"liveServer.settings.donotVerifyTags": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
 	/*"prettier.disableLanguages": [
 		"html",
 		"javascript"
-	],*/
+    ],*/
+	"colorize.languages": [
+		"javascript"
+		// ...
+	]
 }
