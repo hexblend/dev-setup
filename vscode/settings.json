@@ -1,167 +1,136 @@
 {
-	"editor.fontFamily": "Dank Mono",
-	"editor.fontSize": 14,
-	"editor.fontWeight": "400",
-	"editor.lineHeight": 24,
-	"editor.formatOnPaste": true,
+	// Generals
+	"editor.fontFamily": "JetBrains Mono",
 	"editor.fontLigatures": true,
-	"terminal.integrated.fontFamily": "MesloLGS NF",
-	"terminal.integrated.shell.osx": "/bin/zsh",
-	"terminal.external.linuxExec": "iterm",
-	"terminal.external.osxExec": "Iterm.app",
+	"editor.fontSize": 12.5,
+	"editor.fontWeight": "500",
+	"editor.lineHeight": 25,
+	"editor.formatOnPaste": true,
+	// "terminal.integrated.fontFamily": "MesloLGS NF",
+	// "terminal.integrated.shell.osx": "/bin/zsh",
+	// "terminal.external.linuxExec": "iterm",
+	// "terminal.external.osxExec": "Iterm.app",
 	"editor.smoothScrolling": true,
-	"explorer.openEditors.visible": 0,
-	"workbench.tree.indent": 12,
+	// "explorer.openEditors.visible": 2,
+	"workbench.tree.indent": 14,
 	"editor.minimap.enabled": false,
+	"editor.detectIndentation": false,
+	"editor.tabCompletion": "onlySnippets",
+	"editor.snippetSuggestions": "top",
+
+	// Disable Italics
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"storage.type",
+					"variable.parameter",
+					"parameters variable.function",
+					"support.type",
+					"storage.modifier",
+					"entity.other.inherited-class",
+					"entity.other.attribute-name"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+
+	// Emmet
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact"
 	},
-	// "workbench.colorCustomizations": {
-	//     "statusBar.background": "#1A1A1A",
-	//     "statusBar.noFolderBackground": "#212121",
-	//     "statusBar.debuggingBackground": "#263238"
-	// },
-	"editor.formatOnSave": true,
-	"editor.detectIndentation": false,
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "compressed",
-			"extensionName": ".min.css",
-			"savePath": "/css"
-		}
-	],
-	"liveSassCompile.settings.generateMap": false,
+
 	// Vim
 	"editor.lineNumbers": "relative",
 	"editor.cursorBlinking": "solid",
+	"editor.cursorStyle": "block",
+
+	//  Prettier
 	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
 	"prettier.singleQuote": true,
-	"prettier.tabWidth": 2,
-	"editor.tabSize": 4,
+	"prettier.semi": true,
+	"prettier.trailingComma": "all",
 	"editor.suggestSelection": "first",
-	// Enable italic support on any theme
-	// "editor.tokenColorCustomizations": {
-	// 	"[Tokyo+ Night]": {
-	// 		"textMateRules": [
-	// 			{
-	// 				"scope": "emphasis",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "strong",
-	// 				"settings": {
-	// 					"fontStyle": "bold"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "entity.other.attribute-name",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "markup.underline",
-	// 				"settings": {
-	// 					"fontStyle": "underline"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "markup.bold",
-	// 				"settings": {
-	// 					"fontStyle": "bold"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "markup.heading",
-	// 				"settings": {
-	// 					"fontStyle": "bold"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "markup.italic",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "storage.type",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "storage.modifier",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"name": "String interpolation",
-	// 				"scope": [
-	// 					"punctuation.definition.template-expression.begin",
-	// 					"punctuation.definition.template-expression.end",
-	// 					"punctuation.section.embedded"
-	// 				],
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": "keyword.control",
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": [
-	// 					"keyword.operator.new",
-	// 					"keyword.operator.expression",
-	// 					"keyword.operator.cast",
-	// 					"keyword.operator.sizeof",
-	// 					"keyword.operator.logical.python"
-	// 				],
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"name": "this.self",
-	// 				"scope": "variable.language",
-	// 				"settings": {
-	// 					"fontStyle": "italic",
-	// 					"foreground": "#ff5874"
-	// 				}
-	// 			},
-	// 			{
-	// 				"name": "@Decorator",
-	// 				"scope": ["meta.decorator punctuation.decorator"],
-	// 				"settings": {
-	// 					"fontStyle": "italic"
-	// 				}
-	// 			},
-	// 			{
-	// 				"scope": ["punctuation.definition.comment", "comment"],
-	// 				"settings": {
-	// 					// "foreground": "#ff5874",
-	// 					"fontStyle": " "
-	// 				}
-	// 			}
-	// 		]
-	// 	}
-	// },
-	"workbench.activityBar.visible": false,
-	"window.zoomLevel": 0,
-	"workbench.colorTheme": "Tokyo Night Storm",
-	"liveServer.settings.donotVerifyTags": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true,
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+
+	// Stealth
+	"editor.renderLineHighlight": "all",
+	// "workbench.editor.showIcons": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	/*"prettier.disableLanguages": [
-		"html",
-		"javascript"
-    ],*/
-	"colorize.languages": [
-		"javascript"
-		// ...
-	]
+	"colorize.languages": ["javascript", "typescript"],
+	"editor.linkedEditing": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.colorCustomizations": {
+		// "editor.background": "#fff"
+		"editorCursor.foreground": "#ccc",
+		"terminalCursor.foreground": "#ccc"
+	},
+	"json.maxItemsComputed": 10000,
+
+	// Max Editors Open - For Vim
+	// "workbench.editor.limit.enabled": true,
+	// "workbench.editor.limit.value": 4,
+	"breadcrumbs.enabled": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"cSpell.userWords": [
+		"appbar",
+		"autodocs",
+		"blurhash",
+		"Cersei",
+		"clsx",
+		"codegen",
+		"Daenerys",
+		"Datagrid",
+		"Devkey",
+		"favourites",
+		"fontsource",
+		"Futura",
+		"hookform",
+		"ICCID",
+		"Lannister",
+		"mbannhe",
+		"Melisandre",
+		"nativewind",
+		"openapi",
+		"paraspara",
+		"precommit",
+		"Pressable",
+		"Probodhan",
+		"refetching",
+		"roboto",
+		"sidedcube",
+		"supabase",
+		"svgr",
+		"svgs",
+		"tailwindcss",
+		"Targaryen",
+		"toastify",
+		"Triaging",
+		"Urql",
+		"vdrs",
+		"vermillion"
+	],
+	"editor.guides.indentation": true,
+	"git.mergeEditor": false,
+	"terminal.integrated.gpuAcceleration": "on",
+
+	"editor.unicodeHighlight.nonBasicASCII": false,
+	"window.nativeTabs": false,
+	"yaml.schemas": {
+		"file:///Users/vladbibire/.vscode/extensions/atlassian.atlascode-3.0.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+	},
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.enablePreview": false,
+	"workbench.colorTheme": "Tokyo Night",
+	"workbench.statusBar.visible": false,
+	"workbench.activityBar.visible": false
 }
