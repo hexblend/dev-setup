@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'github/copilot.vim'
+  -- Auto Pairs
+  use 'windwp/nvim-autopairs'
   -- fzf
   use {
     'nvim-telescope/telescope.nvim',
@@ -47,6 +49,11 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'}
     }
   }
+  -- terminal
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim
