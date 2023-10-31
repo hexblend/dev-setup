@@ -13,3 +13,4 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<c-b>', ':NvimTreeFindFileToggle<CR>')
+vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]

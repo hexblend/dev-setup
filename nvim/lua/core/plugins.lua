@@ -22,7 +22,10 @@ return require('packer').startup(function(use)
   -- status line
   use 'nvim-lualine/lualine.nvim'
   -- language support
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   -- lsp
   use {
     'williamboman/mason.nvim',
@@ -33,14 +36,30 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
   -- completion
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'github/copilot.vim'
-  -- Auto Pairs
-  use 'windwp/nvim-autopairs'
+  -- auto surrounds 
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup() end
+  }
+  use {
+    'windwp/nvim-ts-autotag',
+    branch = 'main',
+    requires = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function () require('nvim-ts-autotag').setup() end
+  }
+  use {
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function() require("nvim-surround").setup({}) end
+  }
   -- fzf
   use {
     'nvim-telescope/telescope.nvim',
@@ -49,10 +68,24 @@ return require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'}
     }
   }
-  -- terminal
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
+  -- float terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = '*',
+    config = function() require("toggleterm").setup() end
+  }
+  -- keep cursor centered
+  use {
+    "arnamak/stay-centered.nvim",
+    config = function() require("stay-centered").setup {} end
+  }
+  -- comments
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  -- Barline
+  use 'lewis6991/gitsigns.nvim'
+  use 'romgrk/barbar.nvim'
+
 
 
 
