@@ -69,16 +69,16 @@ return require('packer').startup(function(use)
     }
   }
   -- float terminal
-  use {
-    "akinsho/toggleterm.nvim",
-    tag = '*',
-    config = function() require("toggleterm").setup() end
-  }
+  use 'akinsho/toggleterm.nvim'
+  -- git
+  use 'lewis6991/gitsigns.nvim'
   -- keep cursor centered
   use {
     "arnamak/stay-centered.nvim",
     config = function() require("stay-centered").setup {} end
   }
+  -- horizontal travel
+  use 'jinh0/eyeliner.nvim'
   -- comments
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'

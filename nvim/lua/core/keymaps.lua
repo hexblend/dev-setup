@@ -22,6 +22,9 @@ vim.o.smartindent = true
 -- Select all
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
+-- Copy to clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- Remove found pattern highlighting
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
