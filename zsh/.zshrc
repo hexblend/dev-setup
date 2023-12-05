@@ -1,3 +1,5 @@
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -134,3 +136,20 @@ alias showI="defaults write com.apple.finder CreateDesktop true; killall Finder"
 alias hideI="defaults write com.apple.finder CreateDesktop false; killall Finder"
 alias config='/usr/bin/git --git-dir=/Users/vladbibire/.cfg/ --work-tree=/Users/vladbibire'
 alias vim="nvim"
+alias 3sc="cd 3sidedcube"
+alias cf='cd "$(fd --type d --exclude "{.git,.idea,.vscode,.sass-cache,node_modules,build,tmp}" | fzf)"'
+alias vf='nvim "$(fd --type d --exclude "{.git,.idea,.vscode,.sass-cache,node_modules,build,tmp}" | fzf)"'
+
+
+
+setopt autocd
+
+# 0 -- vanilla completion (abc => abc)
+# 1 -- smart case completion (abc => Abc)
+# 2 -- word flex completion (abc => A-big-Car)
+# 3 -- full flex completion (abc => ABraCadabra)
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
+
