@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/vladbibire/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gopher.nvim"] = {
+    loaded = true,
+    path = "/Users/vladbibire/.local/share/nvim/site/pack/packer/start/gopher.nvim",
+    url = "https://github.com/olexsmir/gopher.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/vladbibire/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -234,14 +239,14 @@ time([[Config for nvim-ts-autotag]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: stay-centered.nvim
 time([[Config for stay-centered.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18stay-centered\frequire\0", "config", "stay-centered.nvim")
 time([[Config for stay-centered.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

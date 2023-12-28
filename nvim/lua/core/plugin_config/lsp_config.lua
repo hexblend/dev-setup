@@ -1,7 +1,7 @@
 require('mason').setup()
 
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'tsserver', 'eslint', 'tailwindcss' }
+  ensure_installed = { 'lua_ls', 'tsserver', 'eslint', 'tailwindcss', 'gopls' }
 })
 
 local on_attach = function(_, _)
@@ -64,3 +64,19 @@ require('lspconfig').tsserver.setup {
 }
 require('lspconfig').eslint.setup { on_attach = on_attach, capabilities = capabilities, commands = commands }
 require('lspconfig').tailwindcss.setup { on_attach = on_attach, capabilities = capabilities, commands = commands }
+require('lspconfig').gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  commands = commands,
+  cmd = {"gopls"},
+  filetypes = {"go", "gomod", "gowork", "gotmpl"},
+  root_dir = require('lspconfig/util').root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      analyses = {
+        unusedparams = true,
+      }
+    }
+  }
+}
